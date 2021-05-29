@@ -1,0 +1,23 @@
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
+
+#usual commands
+alias ²="sudo " # you know ...
+alias ²mkdir="sudo mkdir -p " # secure mkdir for made creations in an one shot
+alias ²del="sudo rm -rf "  # caution with that !
+
+#commands for ufw
+alias ²ufw-re="sudo ufw reload" # after config of daemon have change
+alias ²ufw-down="sudo ufw disable" # if you love put your ass to glory holes... 
+alias ²ufw-up="sudo ufw enable" # if you want up the shield ! Like the USS Enterprise !
+alias ²ufw="sudo ufw reload && sudo ufw disable && sudo ufw enable && sudo systemctl enable --now ufw && sudo systemctl status ufw && sudo ufw status" # total reload and restart with checking you can...I abuse ? 
+
